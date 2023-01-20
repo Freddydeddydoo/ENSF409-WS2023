@@ -1,0 +1,110 @@
+
+Assignment 1 Grading Rubric (23 marks)
+
+You may receive zero if:
+- Your code does not compile
+- Your submission is in the wrong format
+- You do not include the correct package declaration
+- You modify the given code stubs
+- You submit any files other than Trip.java and Itinerary.java
+
+Each method is expected to meet the requirements provided in the stubs (takes the specified arguments, returns the correct type, etc.).
+The public methods in the Itinerary and Trip classes will be evaluated as follows:
+
+Itinerary Tests
+1 mark: The Itinerary constructor creates a valid object
+4 marks: formatByArrival() returns the correctly formatted output when...
+	(1) There are 20 trip entries spanning all years between 2021 and 2023
+	(1) There are fewer than 20 trip entries where at least one year has no trips (e.g. no trips in 2022)
+   You may receive part marks if your output does not quite follow the given spacing requirements (i.e. contains an extra new line, wrong punctuation/capitalization, etc.). If your code passed the two previous tests, it will also pass these tests
+	(1) All contents in the right order when there are 20 trip entries spanning all years between 2021 and 2023
+	(1) All contents in the right order when there are fewer than 20 trip entries where at least one year has no trips (e.g. no trips in 2022)
+1 mark: fmtString() returns the correctly formatted String when called from a static class context
+1 mark: getTrips() returns the correct array of Trip objects after initialization
+2 marks: byDate() correctly orders trip entries first by year (1 mark), then by month (1 mark)
+
+Trip Tests
+1 Correct Trip constructor exists
+1 fmtString() creates correctly formatted String when called from a static class context
+1 getYear() returns the correct string when called from a static class context
+1 getMonth() returns the correct string when called from a static class context
+2 marks: formatTrip() returns the correctly formatted output
+   You may receive part marks for the correct contents even if your output does not quite follow the given spacing requirements (i.e. contains an extra new line, wrong punctuation/capitalization, etc.) 
+1 mark: getArrival() returns the correct String after initialization
+1 mark: getDeparture() returns the correct String after initialization
+1 mark: getCity() returns the correct String after initialization
+1 mark: getCountry() returns the correct String after initialization
+1 mark:	setArrival()/getArrival() update and return the correct String
+1 mark: setDeparture()/getDeparture() update and return the correct String
+1 mark: setCountry()/getCountry() update and return the correct String
+1 mark: setCity()/getCity() update and return the correct String
+
+
+Test Name Breakdown
+Some tests are grouped together in the same test class. There is one test for each mark. When reading your feedback, the breakdown is as follows:
+
+Itinerary Tests:
+
+ItineraryConstructorTest
+1 mark: The Itinerary constructor creates a valid object
+
+FormatByArrivalTest
+2 marks: formatByArrival() returns the correctly formatted output. You may receive part marks if your output does not quite follow the given spacing requirements (i.e. contains an extra new line, wrong punctuation/capitalization, etc.).
+	(1) There are 20 trip entries spanning all years between 2021 and 2023
+	(1) All contents in the right order when there are 20 trip entries spanning all years between 2021 and 2023
+
+FormatByArrivalEmptyYearsTest
+2 marks: formatByArrival() returns the correctly formatted output. You may receive part marks if your output does not quite follow the given spacing requirements (i.e. contains an extra new line, wrong punctuation/capitalization, etc.).
+	(1) There are fewer than 20 trip entries where at least one year has no trips (e.g. no trips in 2022)
+	(1) All contents in the right order when there are fewer than 20 trip entries where at least one year has no trips (e.g. no trips in 2022)
+
+ItineraryFmatStringTest
+1 mark: fmtString() returns the correctly formatted String when called from a static class context
+
+ItineraryGetTripsTest
+1 mark: getTrips() returns the correct array of Trip objects after initialization
+
+ItineraryByDateTest
+2 marks: byDate() correctly orders trip entries first by year (1 mark), then by month (1 mark)
+
+
+Trip Tests:
+
+TripConstructorTest
+1 Correct Trip constructor exists
+
+TripFmatStringTest
+1 fmtString() creates correctly formatted String when called from a static class context
+
+TripGetYearTest
+1 getYear() returns the correct string when called from a static class context
+
+TripGetMonthTest
+1 getMonth() returns the correct string when called from a static class context
+
+ItineraryFormatTripTest
+2 marks: formatTrip() returns the correctly formatted output. You may receive part marks for the correct contents even if your output does not quite follow the given spacing requirements (i.e. contains an extra new line, wrong punctuation/capitalization, etc.) 
+
+TripGetArrivalTest
+1 mark: getArrival() returns the correct String after initialization
+
+TripGetDepartureTest
+1 mark: getDeparture() returns the correct String after initialization
+
+TripGetCityTest
+1 mark: getCity() returns the correct String after initialization
+
+TripGetCountryTest
+1 mark: getCountry() returns the correct String after initialization
+
+TripSetArrivalTest
+1 mark:	setArrival()/getArrival() update and return the correct String
+
+TripSetDepartureTest
+1 mark: setDeparture()/getDeparture() update and return the correct String
+
+TripSetCountryTest
+1 mark: setCountry()/getCountry() update and return the correct String
+
+TripSetCityTest
+1 mark: setCity()/getCity() update and return the correct String

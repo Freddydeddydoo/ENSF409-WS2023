@@ -1,0 +1,74 @@
+** Demonstrate formatByArrival
+2021 (Year)
+--12 (Month)
+----Nuuk (City), Greenland (Country) (Place)
+----Longyearbyen (City), Svalbard (Country) (Place)
+2023 (Year)
+--1 (Month)
+----Helsinki (City), Finland (Country) (Place)
+----Casablanca (City), Morocco (Country) (Place)
+----Istanbul (City), Turkey (Country) (Place)
+----Yerevan (City), Armenia (Country) (Place)
+----Tblisi (City), Georgia (Country) (Place)
+----Coimbatore (City), India (Country) (Place)
+----Ooty (City), India (Country) (Place)
+----Hyderabad (City), India (Country) (Place)
+----Seoul (City), South Korea (Country) (Place)
+--2 (Month)
+----Jeju (City), South Korea (Country) (Place)
+----Seoul (City), South Korea (Country) (Place)
+----Tokyo (City), Japan (Country) (Place)
+----Osaka (City), Japan (Country) (Place)
+
+** Demonstrate fmtString
+Nuuk (City)
+Value (Key)
+** Demonstrate formatTrip
+2023-07-10 (Arrival), 2023-08-11 (Departure), Vaduz (City), Liechtenstein (Country)
+** Demonstrate getMonth
+7
+** Demonstrate getYear
+2023
+** Demonstrate getters and setters
+
+--2023-01-10--
+--2023-01-10--
+--Istanbul--
+--Turkey--
+** Demonstrate content of byDate
+dateArray[0][0][0] = null
+dateArray[0][1][0] = null
+dateArray[0][2][0] = null
+dateArray[0][3][0] = null
+dateArray[0][4][0] = null
+dateArray[0][5][0] = null
+dateArray[0][6][0] = null
+dateArray[0][7][0] = null
+dateArray[0][8][0] = null
+dateArray[0][9][0] = null
+dateArray[0][10][0] = null
+dateArray[0][11][0] = Nuuk (City), Greenland (Country)
+dateArray[1][0][0] = null
+dateArray[1][1][0] = null
+dateArray[1][2][0] = null
+dateArray[1][3][0] = null
+dateArray[1][4][0] = null
+dateArray[1][5][0] = null
+dateArray[1][6][0] = null
+dateArray[1][7][0] = null
+dateArray[1][8][0] = null
+dateArray[1][9][0] = null
+dateArray[1][10][0] = null
+dateArray[1][11][0] = null
+dateArray[2][0][0] = Helsinki (City), Finland (Country)
+dateArray[2][1][0] = Jeju (City), South Korea (Country)
+dateArray[2][2][0] = null
+dateArray[2][3][0] = null
+dateArray[2][4][0] = null
+dateArray[2][5][0] = null
+dateArray[2][6][0] = null
+dateArray[2][7][0] = null
+dateArray[2][8][0] = null
+dateArray[2][9][0] = null
+dateArray[2][10][0] = null
+dateArray[2][11][0] = null
