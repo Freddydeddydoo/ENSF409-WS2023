@@ -29,6 +29,7 @@ All rights reserved.
    5. The code can be completed using concepts introduced up to and including
       the day the assignment was released.
    6. You may assume that there will never be more than 20 trips.
+      You may assume that data will be sorted.
       You may assume that trips will only occur in the years 2021, 2022,
       and 2023. They can occur in any month of the year.
    7. Any public method in the Itinerary and Trip classes may be evaluated.
