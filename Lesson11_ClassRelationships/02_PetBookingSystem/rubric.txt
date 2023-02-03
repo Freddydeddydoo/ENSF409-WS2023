@@ -1,0 +1,54 @@
+
+Assignment 2 Grading Rubric (21 marks)
+
+You may receive zero if:
+- Your code does not compile
+- Your submission is in the wrong format
+- You do not include the correct package declaration
+- You do not use the specified visibility, names, etc. shown in the UML diagram
+- You submit any files other than Pet.java, Client.java, RewardsProfile.java, Booking.java, ReportCard.java, Employee.java, CareProfile.java, EmergVet.java, InvalidRewardsNumException.java
+
+Each method is expected to meet the requirements provided in the diagram (takes the specified arguments, returns the correct type, etc.).
+The public methods will be evaluated as follows:
+
+Relationship between Pet and EmergVet
+1 mark: EmergVet information can be constructed outside of Pet class [EmergVetConstructTest]
+2 marks: EmergVet name and phone number can be accessed through getVet in Pet class [EmergNameInPetTest, EmergVetNumberInPetTest]
+
+Relationship between Pet and Client
+3 marks: Client name, phone number, and address can be accessed through getOwner in Pet class with Client getters [ClientAddresInPetTest, ClientNameInPetTest, ClientNumberInPetTest]
+1 mark: Client information can be accessed even after assigned Pet has been deleted [ClientNoInfoPetTest]
+
+Relationship between RewardsProfile and Client
+1 mark: Before enrolling, getRewardsNumber in Client returns the correct default string [NotEnrolledRewardsTest]
+1 mark: After enrolling, getRewardsPoints in Client returns the correct default points total [DefaultRewardsPointsTest]
+1 mark: Rewards points can be updated through updatePoints in Client [AddingRewardsPointsTest]
+
+If rewards number is invalid, throw a custom exception
+1 mark: enrollRewards catches a custom exception from the RewardsProfile constructor if an invalid rewards number is provided as input [InvalidRewardsNumberTest]
+1 mark: RewardsProfile constructor throws a custom exception if an invalid rewards number is provided as input [RewardsExceptionThrownTest]
+
+Relationship between Employee and Pet -- linked through Booking
+1 mark: getCaregiver will return the correct Employee name in Booking [EmployeeNameInBookingTest]
+1 mark: getBookedPet will return the correct Pet name in Booking [PetNameInBookingTest]
+
+Relationship between ReportCard and Booking
+2 marks: printReport in ReportCard returns the correct String using the pet and assigned employee name
+You may receive part marks for the correct contents even if your output does not quite follow the given spacing requirements (i.e. contains an extra new line, wrong punctuation/capitalization, etc.) 
+[2 tests within ReportCardTest]
+
+Relationship between Pet and CareProfile
+2 marks: setCare will correctly update the med list and care notes, getCareSummary will print the given medlist and care notes in the specified format
+You may receive part marks for the correct contents even if your output does not quite follow the given spacing requirements (i.e. contains an extra new line, wrong punctuation/capitalization, etc.) 
+[2 tests within CareProfileTest]
+
+Relationship between Employee and self
+1 mark: getManagerID returns null if an Employee has no manager [EmployeeNoManagerTest]
+1 mark: getManagerID returns the correct ID after set through initalization [EmployeeGetManagerTest]
+1 mark: getEmployees returns the full array of assigned employee names for a manager (max of 10 employees) [GetEmployeesTest]
+
+
+
+
+
+
