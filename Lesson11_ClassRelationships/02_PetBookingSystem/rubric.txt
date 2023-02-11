@@ -9,7 +9,7 @@ You may receive zero if:
 - You submit any files other than Pet.java, Client.java, RewardsProfile.java, Booking.java, ReportCard.java, Employee.java, CareProfile.java, EmergVet.java, InvalidRewardsNumException.java
 
 Each method is expected to meet the requirements provided in the diagram (takes the specified arguments, returns the correct type, etc.).
-The public methods will be evaluated as follows:
+The public methods will be evaluated as follows (note that sometimes additional methods will be used to achieve the desired result, e.g., PetNameInBookingTest will use getBookedPet().getName()):
 
 Relationship between Pet and EmergVet
 1 mark: EmergVet information can be constructed outside of Pet class [EmergVetConstructTest]
