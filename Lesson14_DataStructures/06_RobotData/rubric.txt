@@ -1,0 +1,64 @@
+Assignment 3 Grading Rubric (24 marks)
+
+You may receive zero if:
+- Your code does not compile
+- Your submission is in the wrong format
+- You do not include the correct package declaration
+- You do not use the specified visibility, names, etc. shown in the UML diagram
+- You submit any files other than Actions.java, Directions.java, FormattedOutput.java, Movement.java, RobotDataLine.java, RobotDataRecord.java, Sensor.java
+
+Each method is expected to meet the requirements provided in the diagram (takes the specified arguments, returns the correct type, etc.).
+The public methods, interfaces, and enums will be evaluated as follows:
+
+Constructor Tests (4 marks):
+1 mark: RobotDataRecord constructor creates a non-null object when given a data String array [RobotDataRecordConstructorTest]
+1 mark: RobotDataLine constructor creates a non-null object when given a data String [RobotDataLineConstructorTest]
+1 mark: Sensor constructor creates a non-null object when given a data String [SensorConstructorTest]
+1 mark: Movement constructor creates a non-null object when given a data String [MovementConstructorTest]
+
+Interface Tests (4 marks):
+1 mark: Movement class implements the FormattedOutput interface [MovementInterfaceTest]
+1 mark: Sensor class implements the FormattedOutput interface [SensorInterfaceTest]
+1 mark: Movement implementation of getFormatted returns the correctly formatted String [MovementGetFormattedTest]
+1 mark: Sensor implementation of getFormatted returns the correctly formatted String [SensorGetFormattedTest]
+
+Movement Tests (2 marks):
+1 mark: getAction returns the correct action (String) after the constructor is given a data line [MovementGetActionTest]
+1 mark: getDirection returns the correct direction (String) after the constructor is given a data line [MovementGetDirectionTest]
+
+Sensor Tests (1 mark):
+1 mark: getSensor returns the correct sensor name (String) after the constructor is given a data line [SensorGetSensorTest]
+
+Enumeration Method Tests (1 mark):
+1 mark: Any direction can be expanded to its written form (e.g. N -> "North") using the toString method [DirectionToStringTest]
+
+N = North
+NW = Northwest
+NE = Northeast
+S = South
+SE = Southeast
+SW = Southwest
+E = East
+W = West
+  
+Getter Combination Tests (2 marks):
+
+1 mark: The following getters can be used in combination to get the correct robot ID after a RobotDataRecord is created: create DataRecord> getLine > getRobotID [GetRobotIDTest]
+1 mark: The following getters can be used in combination to get the correct data after a RobotDataRecord is created: create DataRecord > getLine > getDate.toString [GetDateTest]
+***Note that toString here is a built-in method that already exists as part of the LocalDate class.***
+
+Exceptions (5 marks):
+1 mark: Check that an IllegalArgumentException is thrown if an invalid robot ID is provided within the data given to the RobotDataLine constructor [InvalidRobotIDTest]
+1 mark: Check that an IllegalArgumentException is thrown if an invalid date is provided within the data given to the RobotDataLine constructor [InvalidDateTest]
+***Note that the exception must be an IllegalArgumentException, not the date exceptions thrown automatically by LocalDate.***
+1 mark: Check that an IllegalArgumentException is thrown if an invalid action is provided within the data line given to the Movement constructor [InvalidActionTest]
+1 mark: Check that an IllegalArgumentException is thrown if an invalid direction is provided within the data line given to the Movement constructor [InvalidDirectionTest]
+1 mark: Check that an IllegalArgumentException is thrown if an invalid sensor is provided within the data line given to the Sensor constructor [InvalidSensorTest]
+
+Cloning Tests (5 marks):
+1 mark: Verify that a deep copy is created after cloning a RobotDataRecord object [RobotDataRecordCloneTest]
+1 mark: Verify that a deep copy is created after cloning a RobotDataRecord object and calling getLine [GetLineCloneTest]
+1 mark: Verify that a deep copy is created after cloning a RobotDataLine object [RobotDataLineCloneTest]
+1 mark: Verify that a deep copy is created after cloning a Movement object [MovementCloneTest]
+1 mark: Verify that a deep copy is created after cloning a Sensor object [SensorCloneTest]
+
