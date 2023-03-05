@@ -1,0 +1,43 @@
+Assignment 4 Grading Rubric (19 marks)
+
+You may receive zero if:
+- Your code does not compile
+- Your submission is in the wrong format
+- You do not include the correct package declaration
+- You do not submit all required files: DayMemory.java, TranslationText.java, Translator.java, ArgFileNotFoundException.java, CommandArgumentNotProvidedException.java
+- You submit any files other than the required files, such as .ser, .txt, or .class files.
+
+Each method is expected to meet the requirements provided in the comments (takes the specified arguments, returns the correct type, etc.).
+
+** Important **
+In this assessment, there is a strong dependency between the classes. If one class does not compile, this may prevent your code from running any tests (in particular, DayMemory is used in all tests). Furthermore, most tests rely on methods from multiple classes to function correctly (e.g., methods tested in Translator mostly rely on TranslationText).
+
+(3) Using en-US:
+    - getSentence() returns correct stored String [TranslationTextGetSentenceTest]
+    - getMonth() with arbitrary month returns correct value [TranslationTextGetMonthTest]
+    - getDay() with arbitrary day returns correct value [TranslationTextGetDayTest]
+
+(2) File name is invalid:
+    - Translator() throws correct exception type when file name has invalid capitalization [InvalidCapitalizationOfFileTest]
+    - Translator() throws correct exception type when file name is incorrect (for a reason other than capitalization) [InvalidFileNameTest]
+
+(2) File does not exist:
+    - Translator() throws correct exception type [FileDoesNotExistTest]
+    - main() with no argument throws CommandArgumentNotProvidedException [MainRequiresArgumentTest]
+
+(7) Text file is provided by test:
+    - getTranslation returns a TranslationText obj [GetTranslationReturnsObjTest]
+    - translate() returns correctly formatted sentence when given an ordinary date [TranslateOrdinaryDateStandardTxtTest]
+    - translate() returns correctly formatted sentence when given a CE date of less than 4 digits [TranslateOldDateStandardTxtTest]
+    - translate() returns correctly formatted sentence when given a BCE date [TranslateBCEDateStandardTxtTest]
+    - translate() throws correct exception type given invalid month [TranslateInvalidMonthThrowsException]
+    - translate() throws correct exception type given invalid day [TranslateInvalidDayThrowsException]
+    - serialize() creates the expected file, which can be deserialized [SerializeTest]
+
+(4) Ser file is provided by test
+    - getTranslation returns TranslationText obj [GetTranslationReturnsObjWithSerTest]
+    - translate() returns correctly formatted sentence when given an ordinary date [TranslateOrdinaryDateSerFileTest]
+    - translate() returns correctly formatted sentence when given a CE date of less than 4 digits [TranslateOldDateSerFileTest]
+    - translate() returns correctly formatted sentence when given a BCE date [TranslateBCEDateSerFileTest]
+
+(1) translate() prefers a ser file to a text file [PreferSerOverTxtTest]
