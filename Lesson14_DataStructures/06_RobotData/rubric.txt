@@ -12,9 +12,9 @@ The public methods, interfaces, and enums will be evaluated as follows:
 
 Constructor Tests (4 marks):
 1 mark: RobotDataRecord constructor creates a non-null object when given a data String array [RobotDataRecordConstructorTest]
-1 mark: RobotDataLine constructor creates a non-null object when given a data String [RobotDataLineConstructorTest]
-1 mark: Sensor constructor creates a non-null object when given a data String [SensorConstructorTest]
-1 mark: Movement constructor creates a non-null object when given a data String [MovementConstructorTest]
+1 mark: RobotDataLine constructor creates a non-null object when given a data String (complete robot data line) [RobotDataLineConstructorTest]
+1 mark: Sensor constructor creates a non-null object when given a data String (complete robot data line) [SensorConstructorTest]
+1 mark: Movement constructor creates a non-null object when given a data String (complete robot data line) [MovementConstructorTest]
 
 Interface Tests (4 marks):
 1 mark: Movement class implements the FormattedOutput interface [MovementInterfaceTest]

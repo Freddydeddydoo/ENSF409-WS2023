@@ -51,10 +51,17 @@ public class MyOutput {
             System.out.println(dataFileCopy.getLine(0).getSensor() == dataFile.getLine(0).getSensor());
             
             //Example of testing invalid input- modify the data as needed to try various invalid scenarios
-            // If you want to check IllegalArgumentExceptions being thrown, you can instantiate RobotDataLine, Movement, and Sensor. Bad data lines should be skipped by RobotDataRecord.
-            System.out.println("Uncomment below to test exceptions...");
-            //String[] badData = getBadData();
-            //RobotDataRecord badDataFile = new RobotDataRecord(badData);
+            System.out.println("Invalid data lines are skipped by RobotDataRecord");
+            String[] badData = getBadData();
+            RobotDataRecord badDataFile = new RobotDataRecord(badData);
+
+            // If you want to check IllegalArgumentExceptions being thrown, you can instantiate RobotDataLine, Movement, and Sensor.
+            System.out.println("Write your own code to test exceptions for each class...");
+
+            // So far we only looked at RobotDataRecord and did not try to instantiate
+            // objects without going through RobotDataRecord. Write code to test each class
+            // independently.
+            System.out.println("Write your own code to test instantiating each object individually with the complete dataLog line...");
 	}
 
 
