@@ -28,6 +28,8 @@ package edu.ucalgary.oop;
    * not if the region and language codes are valid according to the ISO specifications.
    * The input parameter must exactly match the expected format.
    * It calls importTranslation().
+   * Does not catch ArgFileNotFoundException (exception may optionally be caught
+   * by code which invokes this constructor).
   */
 
   /* importTranslation()
