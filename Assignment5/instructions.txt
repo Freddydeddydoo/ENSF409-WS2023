@@ -1,0 +1,37 @@
+** Instructions **
+
+The city of Calgary currently allows each residential address to have three registered vehicle licences with Alberta plates registered for street parking.
+It has been decided that the system needs to be changed so that each residential address can have one registered Alberta licence, and two registered visitors at any given time.
+You have been tasked with modifying the system to implement the new feature.
+
+The parking system is part of a larger series of classes which are used to manage the city. 
+The senior developer has provided you with the relevant parts of the system: CalgaryProperty.java, HouseholdParking.java, Parking.java, and ZoningTypes.java, along with the existing test suite, ExistingFunctionalityTest.java.
+
+They have also created a series of tests to describe how the new feature should work: NewFeatureTest.java. 
+They also mentioned the following specifications:
+- Only Alberta licence plate numbers are accepted
+- There could be any number of reservations stored, and any number of licences stored
+- A visitor parking reservation is valid for the date it is issued, plus the next two days (3 days total)
+- It is not possible to register the same visitor licence plate for a day when the licence is already registered
+- It is not possible to have more than two visitor licences registered for a single day (per household)
+- It isn't possible to register a date in the past
+
+They added the warning that when you implement the new functionality, the existing tests around resident licences should break.  Their advice was to simply remove those tests which describe obsolete functionality (being able to manipulate more than one resident licence), but use the rest of the tests to ensure that you don't change anything else by accident.
+
+The senior developer suggested that you store information about parking using a HashMap, where each key corresponds to a normalized licence, and each value is a TreeSet of LocalDate objects associated with only the starting dates of reservations for just that licence, ordered later to earlier (e.g., 2024-01-01 comes before 2020-12-30).  They made a few extra tests related to the implementation, BonusTest.java. If you decide to use this data structure, you'll need to name it 'parkingRecord' and supply a getter for it.  If you choose not to follow this implementation, you don't need to provide a getter for the data structure in VisitorParking.
+
+** Note **
+
+Do not include any libraries which are not being used. In particular, including testing libraries in non-testing files (e.g., importing Junit or Hamcrest in VisitorParking) can cause confusion in the autograder, even if it works on the command-line. (This is because build systems such as Maven and Gradle separate test files from other files and do not expect to encounter tests outside of the testing folder.)
+
+** Tips **
+
+In this assignment, you are expected to write some code from scratch, using test-driven development. 
+When doing test-driven development, there are two approaches you can follow:
+
+1. Comment out tests that are not related to your current task, and work until the current task is complete.
+Start with constructors, getters, and setters. Uncomment tests as you are ready to begin the functionality.
+
+2. Write stub code for each method. Ensure that the methods take the expected parameters and return a value of the correct type, but do not implement any logic - just hardcode return statements.
+This will ensure that the code can be compiled against the tests, and you can then work on one method at a time - again starting with constructors, getters, and setters - implementing the logic necessary to pass tests.
+

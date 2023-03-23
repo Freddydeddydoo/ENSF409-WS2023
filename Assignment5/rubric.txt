@@ -1,0 +1,60 @@
+Assignment 5 Grading Rubric (15 marks + 6 bonus marks)
+
+Skills evaluated:
+- Test-driven development (implementation of requirements based on tests)
+- Maintaining and modifying existing legacy code
+- Use of data structures
+- Implementation of restrictions (maximum number of reservations)
+- Writing a custom exception
+- Using exceptions to communicate between classes
+- Use of multiple files, dependencies
+- Use of packages
+
+You may receive zero if:
+- Any submitted file does not compile 
+- Your code does not compile and run against our test file 
+- Your submission is in the wrong format
+- You do not include the correct package declaration
+- You do not include all the required files: CalgaryProperty.java, ZoningTypes.java, Parking.java, HouseholdParking.java, VisitorParking.java
+- You include files other than the required files. In particular, if you include NewFeatureTest.java, BonusTest.java or ExistingFunctionalityTest.java, you will receive zero!
+
+Additional notes:
+- Re-submissions will still be capped at 90%. The cap will be applied after all tests (including bonus tests) are run. If you request and receive an extension, the cap will not be applied.
+- If you score more than 100% in the assignment category, this will improve your overall course grade.
+
+
+Each method is expected to meet the requirements (takes the specified arguments, returns the correct type, etc.).
+
+The tests which will be used to evaluate your code are not identical to the ones provided. We will test the same functionality, but using different values. 
+For example, in the version of 'testThrowsExceptionWithInvalidLicence' provided to you, we test with the invalid String "76543210". In the version of the test which is used to grade your submission, we will use a different value, for instance "0000000000".
+
+
+The code will be evaluated as follows:
+
+VisitorParking Exceptions: (6 marks)
+1 mark: IllegalArgumentException is thrown when given an invalid license, for all methods that take a license [ThrowsExceptionWithInvalidLicense]
+1 mark: IllegalArgumentException is thrown when trying to set a reservation for a date in the past [ThrowsExceptionWithInvalidDate]
+1 mark: IllegalArgumentException is thrown when trying to make two overlapping reservations for the same license [ThrowsExceptionWithOverlapDate]
+1 mark: IllegalArgumentException is thrown when trying to make a third reservation on a date which already has two [ThrowsExceptionTooManyPermits]
+1 mark: A third reservation which doesn't overlap with two existing reservations is possible [AllowsNonOverlappingReservations]
+1 mark: Two sequential but non-overlapping reservations for the same license can be made [AllowsSequentialReservationsForLicense]
+
+VisitorParking Features: (6 marks)
+1 mark: The method addVisitorReservation() successfully adds multiple reservations across dates - checked via licenseIsRegisteredForDate() [ManyReservations]
+1 mark: The method getLicencesRegisteredForDate() returns licences registered for today [LicencesRegisteredForToday]
+1 mark: The method getLicencesRegisteredForDate() returns licences registered for a future date [LicencesRegisteredForDate]
+1 mark: When a licences is registered, it is for the current date plus two additional days only [ReservationsForThreeDaysOnly]
+1 mark: The method getStartDaysLicenceIsRegistered() returns an ordered ArrayList of all starting days a licence is registered for [StartDaysLicenceIsRegistered]
+1 mark: The method getAllDaysLicenceIsRegistered() returns an ordered ArrayList of all days the licence is registered for [AllDaysLicenceIsRegistered]
+
+HouseholdParking Changes: (3 marks)
+1 mark: HouseholdParking method addVisitorReservation() works as expected (requires use visitors getter) [AddViaHouseholdParking]
+1 mark: HouseholdParking methods getLicencesRegisteredForDate(), licenceIsRegisteredForDate(), getStartDaysLicenceIsRegistered() and allDaysLicenceIsregistered() call appropriate methods in VisitorParking [AccessViaHouseholdParking]
+1 mark: HouseholdParking stores just one licence for a resident, which can be added, replaced, or deleted [OnlyOneResidentLicence]
+
+
+The bonus will be evaluated as follows:
+Precondition: getParkingRecord() method has been implemented to return the parkingRecord data structure.
+2 marks: parkingRecord is implemented as a HashMap where the keys correspond to normalized licences [BonusKeysAreLicences]
+2 marks: parkingRecord is implemented as a HashMap where the values are TreeSets storing only the first day of a reservation [BonusValuesAreTreeSets]
+2 marks: parkingRecord is implemented as a HashMap where values are reverse-ordered TreeSets for each licence [BonusValueAreReverseTreeSetByLicence]
